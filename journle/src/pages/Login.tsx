@@ -35,8 +35,11 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: 'auto', padding: '20px' }}>
-      <h1>Login</h1>
+    <div style={{ maxWidth: '600px', margin: 'auto', padding: '50px' }}>
+      <div className="box"> 
+      <div className="typewriter">
+        <h1> Journle</h1> </div> 
+      <div className="slogan"> one day, one entry</div>
       <form onSubmit={handleLogin}>
         <div>
           <label>Email:</label>
@@ -45,7 +48,7 @@ const Login: React.FC = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            style={{ width: '100%', padding: '8px', margin: '10px 0' }}
+            style={{ width: '100%', padding: '8px', margin: '10px 0', background: 'white', color: 'black'}}
           />
         </div>
         <div>
@@ -55,7 +58,7 @@ const Login: React.FC = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            style={{ width: '100%', padding: '8px', margin: '10px 0' }}
+            style={{ width: '100%', padding: '8px', margin: '10px 0' ,background: 'white', color: 'black'}}
           />
           
         </div>
@@ -67,9 +70,11 @@ const Login: React.FC = () => {
         <p>
       Don't have an account? <Link to="/signup">Sign Up</Link>
     </p>
+    
       </form>
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+    </div>
     </div>
   );
 };
